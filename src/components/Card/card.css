@@ -1,0 +1,15 @@
+.CardBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: mediumaquamarine;
+  min-height: 200px;
+  text-align: center;
+  max-width: 250px;
+  flex-grow: 4;
+  margin: 10px;
+  padding: 10px;
+}
+.CardBlock div {
+  word-break: break-all;
+}
