@@ -7,7 +7,7 @@ const DogsCard = ({ dog }) => {
         <img
           width={200}
           height={200}
-          src={`./src/assets/${dog.image}`}
+          src={`${import.meta.env.BASE_URL}/assets/${dog.image}`}
           alt={dog.name}
         />
         <div>{`Vardas: ${dog.name}`}</div>
