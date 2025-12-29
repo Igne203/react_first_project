@@ -1,16 +1,19 @@
-import '../Card/card.css';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
-const Card = ({cat}) => {
-    return(
-        <>
-        <div className='CardBlock'>
-            <h2>{cat.name}</h2>
-            <img width={200} height={200} src={`${import.meta.env.BASE_URL}/assets/${cat.image}`} alt={cat.name} />
-            <div>{`Megstamiausias zaislas: ${cat.toy}`}</div>
-        </div>
-        </>
-    )
-
+function CatCard({ cat }) {
+  return (
+    <Card style={{ width: '18rem', margin: '1rem' }}>
+      <Card.Img variant="top" src={cat.image} style={{height: '18rem'}}/>
+      <Card.Body>
+        <Card.Title>{cat.name}</Card.Title>
+        <Card.Text>
+          Favorite toy: {cat.toy}
+        </Card.Text>
+        <Button variant="primary">Adopt Me</Button>
+      </Card.Body>
+    </Card>
+  );
 }
 
-export default Card;
+export default CatCard;

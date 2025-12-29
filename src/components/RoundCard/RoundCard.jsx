@@ -1,20 +1,19 @@
-import "../RoundCard/RoundCard.css";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
-const DogsCard = ({ dog }) => {
+function DogsCard({ dog }) {
   return (
-    <>
-      <div className="DogsCard">
-        <img
-          width={200}
-          height={200}
-          src={`${import.meta.env.BASE_URL}/assets/${dog.image}`}
-          alt={dog.name}
-        />
-        <div>{`Vardas: ${dog.name}`}</div>
-        <div>{`Megstamiausias maistas: ${dog.food}`}</div>
-      </div>
-    </>
+    <Card style={{ width: '18rem', margin: '1rem' }}>
+      <Card.Img variant="top" src={dog.image} style={{ height: '18rem', borderRadius: '50%', objectFit: 'cover' }} />
+      <Card.Body>
+        <Card.Title>{dog.name}</Card.Title>
+        <Card.Text>
+          Favorite food: {dog.food}
+        </Card.Text>
+        <Button variant="primary">Adopt Me</Button>
+      </Card.Body>
+    </Card>
   );
-};
+}
 
 export default DogsCard;

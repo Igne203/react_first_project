@@ -2,27 +2,29 @@ import "./App.css";
 import Header from "./components/Header/Header.jsx";
 import Card from "./components/Card/card.jsx";
 import DogsCard from "./components/RoundCard/RoundCard.jsx";
+import ParagraphAccordion from "./components/ParagraphAccordion/ParagraphAccordion.jsx";
+import DogSlider from "./components/DogSlider/DogSlider.jsx";
 
 function App() {
   const cats = [
     {
       name: "Murklys",
-      image: "unnamed.webp",
+      image: "public/assets/unnamed.webp",
       toy: "Siulu kamuoliukas",
     },
     {
       name: "Rainakelis",
-      image: "smiley.jpg",
+      image: "public/assets/smiley.jpg",
       toy: "Zaisline pele",
     },
     {
       name: "Druckis",
-      image: "fatcat.webp",
+      image: "public/assets/fatcat.webp",
       toy: "Lazeris",
     },
     {
       name: "Rustusis",
-      image: "images.jpg",
+      image: "public/assets/images.jpg",
       toy: "---",
     },
   ];
@@ -30,17 +32,17 @@ function App() {
   const dogs = [
     {
       name: "Amsius",
-      image: "1.jpg",
+      image: "public/assets/1.jpg",
       food: "Kaulai",
     },
     {
       name: "Iltis",
-      image: "2.jpg",
+      image: "public/assets/2.jpg",
       food: "Kuciukai",
     },
     {
       name: "Ausyte",
-      image: "3.jpg",
+      image: "public/assets/3.jpg",
       food: "Mandarinai",
     },
   ];
@@ -64,14 +66,12 @@ function App() {
 
       <div className="ContainerBlock">{cardItems}</div>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ea odit
-        dolorum, cupiditate consequuntur tempore reprehenderit voluptas,
-        sapiente dolorem velit aliquid, voluptate quam perferendis reiciendis
-        facilis culpa facere quae? Porro.
-      </p>
+      <ParagraphAccordion />
 
       <div className="ContainerBlock">{dogItems}</div>
+      <div className="ContainerBlock"><DogSlider dogs={dogs}  /></div>
+
+      
     </>
   );
 }
